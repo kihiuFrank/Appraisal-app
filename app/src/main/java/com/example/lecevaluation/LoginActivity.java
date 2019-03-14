@@ -2,12 +2,14 @@ package com.example.lecevaluation;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -33,6 +35,8 @@ public class LoginActivity extends AppCompatActivity {
     private EditText loginInputregNo, loginInputPassword;
     private Button btnlogin;
     private Button btnLinkSignup;
+    TextView textView;
+    int counter = 3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +47,8 @@ public class LoginActivity extends AppCompatActivity {
         loginInputPassword = (EditText) findViewById(R.id.login_input_password);
         btnlogin = (Button) findViewById(R.id.btn_login);
         btnLinkSignup = (Button) findViewById(R.id.btn_link_signup);
+        textView = (TextView)findViewById(R.id.textView3);
+        textView.setVisibility(View.GONE);
 
         //Progress Dialog
         progressDialog = new ProgressDialog(this);
@@ -89,8 +95,8 @@ public class LoginActivity extends AppCompatActivity {
                          * Reached Here
                          */Intent intent = new Intent(
                                 LoginActivity.this,
-                                UserActivity.class);
-                        intent.putExtra("username", user);
+                                MainActivity.class);
+                        intent.putExtra("username", User);
                         startActivity(intent);
                         finish();
                     } else {
@@ -98,6 +104,15 @@ public class LoginActivity extends AppCompatActivity {
                         String errorMsg = jObj.getString("error_msg");
                         Toast.makeText(getApplicationContext(),
                                 errorMsg, Toast.LENGTH_LONG).show();
+
+                        textView.setVisibility(View.VISIBLE);
+                        textView.setBackgroundColor(Color.RED);
+                        counter--;
+                        textView.setText(Integer.toString(counter));
+
+                        if (counter == 0) {
+                            btnlogin.setEnabled(false);
+                        }
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -117,7 +132,7 @@ public class LoginActivity extends AppCompatActivity {
             protected Map<String, String> getParams() {
                 // Posting params to login url
                 Map<String, String> params = new HashMap<String, String>();
-                params.put("email", email);
+                params.put("reg_no", reg_no);
                 params.put("password", password);
                 return params;
             }

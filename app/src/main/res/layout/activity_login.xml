@@ -30,6 +30,14 @@
         android:layout_below = "@+id/textView1"
         android:layout_centerHorizontal = "true" />
 
+    <ImageView
+        android:layout_width="350dp"
+        android:layout_height="300dp"
+        android:id="@+id/imageView"
+        android:src="@drawable/login_image"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" />
+
     <EditText
         android:layout_width = "wrap_content"
         android:layout_height = "wrap_content"
@@ -38,20 +46,13 @@
         android:focusable = "true"
         android:textColorHighlight = "#ff7eff15"
         android:textColorHint = "#ffff25e6"
-        android:layout_marginTop = "46dp"
+        android:layout_marginTop = "30dp"
         android:layout_below = "@+id/imageView"
         android:layout_alignParentLeft = "true"
         android:layout_alignParentStart = "true"
         android:layout_alignParentRight = "true"
         android:layout_alignParentEnd = "true" />
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView"
-        android:src="@drawable/login_image"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -88,27 +89,32 @@
         android:layout_alignBottom="@+id/textView2"
         android:layout_toEndOf="@+id/textView2"
         android:textSize="25sp"
-        android:layout_toRightOf="@+id/textView2" />
+        android:layout_toRightOf="@+id/textView2"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"/>
 
 
     <Button android:id="@+id/btn_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/btn_login"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/login_input_password"
-        android:textColor="@android:color/white"
-        android:layout_toLeftOf="@+id/textView3"
-        android:layout_toStartOf="@+id/textView3"/>
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/textView2"
+        android:textColor="@android:color/black"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"/>
 
     <Button android:id="@+id/btn_link_signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/btn_sign_up"
-        android:layout_marginTop="3dp"
         android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/textView3"
-        android:layout_toEndOf="@+id/textView3"/>
+        android:layout_toRightOf="@+id/textView2"
+        android:layout_toEndOf="@+id/textView2"
+        android:layout_below="@id/textView3"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginLeft="50dp"/>
 
 
 </RelativeLayout>
