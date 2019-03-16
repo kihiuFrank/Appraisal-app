@@ -26,8 +26,8 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String TAG = "LoginActivity";
-    private static final String URL_FOR_LOGIN = "https://127.0.0.1/android_login/login.php";
+    private static final String TAG = "MainActivity";
+    private static final String URL_FOR_LOGIN = "https://192.168.42.247/android_login/login.php";
     /**
      * the url is  C:\xampp/htdocs\android_login\login.php
      */
@@ -63,6 +63,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 loginUser(loginInputregNo.getText().toString(),
                         loginInputPassword.getText().toString());
+
+                textView.setVisibility(View.VISIBLE);
+                textView.setBackgroundColor(Color.RED);
+                counter--;
+                textView.setText(Integer.toString(counter));
+
+                if (counter == 0) {
+                    btnlogin.setEnabled(false);
+                }
             }
         });
 
@@ -110,14 +119,6 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(),
                                 errorMsg, Toast.LENGTH_LONG).show();
 
-                        textView.setVisibility(View.VISIBLE);
-                        textView.setBackgroundColor(Color.RED);
-                        counter--;
-                        textView.setText(Integer.toString(counter));
-
-                        if (counter == 0) {
-                            btnlogin.setEnabled(false);
-                        }
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();

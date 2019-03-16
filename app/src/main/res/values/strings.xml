@@ -26,6 +26,6 @@
 
     <string name="Enter_Email">Enter Email</string>
 
-    <string name="btn_link_signup">No Account? Register !!</string>
+    <string name="btn_link_signup">Sign Up</string>
     <string name="btn_link_login">Have an account? Login !!</string>
 </resources>

@@ -26,7 +26,7 @@ import java.util.Map;
 public class RegisterActivity extends AppCompatActivity {
 
     private static final String TAG = "RegisterActivity";
-    private static final  String URL_FOR_REGISTRATION = "http://127.0.0.1/android_login/register.php";
+    private static final  String URL_FOR_REGISTRATION = "http://192.168.42.247/android_login/register.php";
     ProgressDialog progressDialog;
 
     private EditText SignupInputFirstName,SignupInputLastName,SignupInputRegNo, SignupInputEmail, SignupInputPassword;
@@ -50,6 +50,7 @@ public class RegisterActivity extends AppCompatActivity {
         SignupInputLastName = (EditText) findViewById(R.id.signup_input_LastName);
         SignupInputRegNo = (EditText) findViewById(R.id.signup_input_regNo);
         SignupInputEmail = (EditText) findViewById(R.id.signup_input_email);
+        SignupInputPassword = (EditText) findViewById(R.id.signup_input_password);
 
         btnLinkLogin = (Button) findViewById(R.id.btn_link_login);
         btnSignup = (Button) findViewById(R.id.btn_signup);
@@ -68,9 +69,6 @@ public class RegisterActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
-
-
     }
 
     private void submitForm(){
@@ -143,8 +141,8 @@ public class RegisterActivity extends AppCompatActivity {
             protected Map<String, String> getParams() {
                 // Posting params to register url
                 Map<String, String> params = new HashMap<String, String>();
-                params.put("F_name", first_name);
-                params.put("L_name", last_name);
+                params.put("first_name", first_name);
+                params.put("last_name", last_name);
                 params.put("reg_no", reg_no);
                 params.put("email", email);
                 params.put("password", password);
