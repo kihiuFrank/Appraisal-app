@@ -27,7 +27,7 @@ import java.util.Map;
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
-    private static final String URL_FOR_LOGIN = "https://192.168.42.247/android_login/login.php";
+    private static final String URL_FOR_LOGIN = "https://192.168.168.1/android_login/login.php";
     /**
      * the url is  C:\xampp/htdocs\android_login\login.php
      */

@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_gravity="center"
+    android:background="@drawable/africa"
     android:paddingTop="20dp"
     android:paddingLeft="20dp"
     android:paddingRight="20dp"
@@ -19,19 +20,20 @@
         android:orientation="vertical">
 
         <TextView
-            android:layout_width = "wrap_content"
-            android:layout_height = "wrap_content"
-            android:text = "@string/Lec"
-            android:id = "@+id/textView1"
-            android:layout_alignParentTop = "true"
-            android:layout_centerHorizontal = "true"
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/Lec"
             android:textColor = "@android:color/holo_orange_dark"
-            android:textSize = "35sp" />
+            android:textSize="35sp" />
 
         <TextView
             android:text = "@string/Register"
             android:layout_width="wrap_content"
             android:layout_height = "wrap_content"
+            android:textColor="@android:color/holo_blue_dark"
             android:id = "@+id/textView"
             android:textSize = "35sp"
             android:layout_marginTop="10dp"
@@ -42,9 +44,15 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:id="@+id/imageView"
-            android:src="@drawable/kenya"
+            android:src="@drawable/must"
             android:layout_below="@+id/textView"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="3dp"
+            android:layout_toEndOf="@+id/textView"
+            android:layout_toRightOf="@+id/textView"/>
 
         <EditText
             android:layout_width = "wrap_content"
@@ -53,7 +61,8 @@
             android:hint=   "@string/Enter_First_name"
             android:focusable = "true"
             android:textColorHighlight = "#ff7eff15"
-            android:textColorHint = "#ffff25e6"
+            android:textColorHint="@android:color/holo_blue_light"
+            android:textColor="@android:color/background_dark"
             android:layout_marginTop = "30dp"
             android:layout_below = "@+id/imageView"
             android:layout_alignParentLeft = "true"
@@ -73,7 +82,8 @@
             android:layout_alignParentStart="true"
             android:layout_alignRight="@+id/signup_input_FirstName"
             android:layout_alignEnd="@+id/signup_input_FirstName"
-            android:textColorHint="#ffff299f"
+            android:textColorHint="@android:color/holo_blue_light"
+            android:textColor="@android:color/background_dark"
             android:hint="@string/Enter_Last_name" />
 
         <EditText
@@ -83,7 +93,8 @@
             android:hint=   "@string/hint_enter_regNo"
             android:focusable = "true"
             android:textColorHighlight = "#ff7eff15"
-            android:textColorHint = "#ffff25e6"
+            android:textColorHint="@android:color/holo_blue_light"
+            android:textColor="@android:color/background_dark"
             android:layout_marginTop = "10dp"
             android:layout_below = "@+id/signup_input_LastName"
             android:layout_alignParentLeft = "true"
@@ -103,7 +114,8 @@
             android:layout_alignParentStart="true"
             android:layout_alignRight="@+id/signup_input_regNo"
             android:layout_alignEnd="@+id/signup_input_regNo"
-            android:textColorHint="#ffff299f"
+            android:textColorHint="@android:color/holo_blue_light"
+            android:textColor="@android:color/background_dark"
             android:hint="@string/Enter_Email" />
 
 
@@ -119,7 +131,8 @@
             android:layout_alignParentStart="true"
             android:layout_alignRight="@+id/signup_input_email"
             android:layout_alignEnd="@+id/signup_input_email"
-            android:textColorHint="#ffff299f"
+            android:textColorHint="@android:color/holo_blue_light"
+            android:textColor="@android:color/background_dark"
             android:hint="@string/Enter_password" />
 
         <TextView
@@ -156,12 +169,14 @@
                 android:id="@+id/gender_radio_group"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
                 <RadioButton
                     android:id="@+id/male_radio_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/male"
+                    android:textColor="@android:color/background_dark"
                     android:checked="true"
                     />
                 <RadioButton
@@ -169,6 +184,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text = "@string/female"
+                    android:textColor="@android:color/background_dark"
                     />
             </RadioGroup>
 
@@ -181,9 +197,9 @@
             android:layout_below="@+id/gender_textview"
             android:layout_marginStart="0dp"
             android:layout_marginLeft="0dp"
-            android:layout_marginTop="60dp"
-            android:text="@string/btn_sign_up"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/holo_blue_dark"
+            android:layout_marginTop="80dp"
+            android:text="@string/btn_sign_up"/>
 
         <Button
             android:id="@+id/btn_link_login"
@@ -191,17 +207,17 @@
             android:layout_height="63dp"
             android:layout_below="@id/gender_textview"
             android:layout_alignParentEnd="true"
+            android:textColor="@android:color/holo_blue_dark"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="20dp"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="80dp"
             android:layout_marginEnd="0dp"
             android:layout_marginRight="3dp"
             android:layout_toEndOf="@+id/btn_signup"
             android:layout_toRightOf="@+id/btn_signup"
-            android:text="@string/btn_link_login"
-            android:textColor="@android:color/black" />
+            android:text="@string/btn_link_login" />
 
 
     </RelativeLayout>

@@ -26,7 +26,7 @@ import java.util.Map;
 public class RegisterActivity extends AppCompatActivity {
 
     private static final String TAG = "RegisterActivity";
-    private static final  String URL_FOR_REGISTRATION = "http://192.168.42.247/android_login/register.php";
+    private static final  String URL_FOR_REGISTRATION = "http://192.168.168.1/android_login/register.php";
     ProgressDialog progressDialog;
 
     private EditText SignupInputFirstName,SignupInputLastName,SignupInputRegNo, SignupInputEmail, SignupInputPassword;
