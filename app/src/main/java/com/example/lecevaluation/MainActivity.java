@@ -27,10 +27,8 @@ import java.util.Map;
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
-    private static final String URL_FOR_LOGIN = "https://192.168.168.1/android_login/login.php";
-    /**
-     * the url is  C:\xampp/htdocs\android_login\login.php
-     */
+    private static final String URL_FOR_LOGIN = "https://192.168.42.204/android_login/login.php";
+
 
     ProgressDialog progressDialog;
     private EditText loginInputregNo, loginInputPassword;
@@ -44,11 +42,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        loginInputregNo = (EditText) findViewById(R.id.login_input_regNo);
-        loginInputPassword = (EditText) findViewById(R.id.login_input_password);
-        btnlogin = (Button) findViewById(R.id.btn_login);
-        btnLinkSignup = (Button) findViewById(R.id.btn_link_signup);
-        textView = (TextView)findViewById(R.id.textView3);
+        loginInputregNo =  findViewById(R.id.login_input_regNo);
+        loginInputPassword = findViewById(R.id.login_input_password);
+        btnlogin =  findViewById(R.id.btn_login);
+        btnLinkSignup =  findViewById(R.id.btn_link_signup);
+        textView = findViewById(R.id.textView3);
         textView.setVisibility(View.GONE);
 
         //Progress Dialog
