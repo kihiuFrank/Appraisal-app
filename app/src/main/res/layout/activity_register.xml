@@ -8,8 +8,8 @@
     android:layout_gravity="center"
     android:background="@drawable/africa"
     android:paddingTop="20dp"
-    android:paddingLeft="20dp"
-    android:paddingRight="20dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
     tools:context=".RegisterActivity">
 
     <RelativeLayout
@@ -150,9 +150,9 @@
             android:layout_alignEnd="@+id/signup_input_password"
             android:text="@string/hint_gender"
             android:textColor="@android:color/background_dark"
-            android:fontFeatureSettings="@string/hint_password"
+            android:fontFeatureSettings="@string/password"
             android:textSize="20sp"
-            android:fontFamily="@string/hint_password"/>
+            android:fontFamily="@string/password"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -199,6 +199,7 @@
             android:layout_marginLeft="0dp"
             android:textColor="@android:color/holo_blue_dark"
             android:layout_marginTop="80dp"
+            android:textSize = "20sp"
             android:text="@string/btn_sign_up"/>
 
         <Button
@@ -217,6 +218,7 @@
             android:layout_marginRight="3dp"
             android:layout_toEndOf="@+id/btn_signup"
             android:layout_toRightOf="@+id/btn_signup"
+            android:textSize = "18sp"
             android:text="@string/btn_link_login" />
 
 

@@ -27,7 +27,7 @@ import java.util.Map;
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
-    private static final String URL_FOR_LOGIN = "https://192.168.42.204/android_login/login.php";
+    private static final String URL_FOR_LOGIN = "http://192.168.168.1/android_login/login.php";
 
 
     ProgressDialog progressDialog;
@@ -91,8 +91,7 @@ public class MainActivity extends AppCompatActivity {
                 URL_FOR_LOGIN, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                Log.d(TAG, "Register Response: " + response.toString()
-                );
+                Log.d(TAG, "Register Response: " + response);
                 hideDialog();
                 try {
                     JSONObject jObj = new JSONObject(response);
@@ -102,9 +101,10 @@ public class MainActivity extends AppCompatActivity {
                         String User = jObj.getJSONObject("user").getString("reg_no");
 
                         /**
-                         * Launch User Activity
-                         * Reached Here
-                         */Intent intent = new Intent(
+                        * Launch User Activity
+                        * */
+
+                        Intent intent = new Intent(
                                 MainActivity.this,
                                 UserActivity.class);
                         intent.putExtra("reg_no" //or regNo or username

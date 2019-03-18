@@ -3,7 +3,7 @@
     <string name="btn_login">Login</string>
     <string name="Login">Login</string>
 
-    <string name="hint_password">Password</string>
+    <string name="password">Password</string>
     <string name="Enter_password">Enter Password</string>
 
 
@@ -12,7 +12,7 @@
 
 
     <string name="Register">Register</string>
-    <string name="hint_regNo">Registration Number</string>
+    <string name="regNo">Reg No</string>
 
     <string name="hint_enter_regNo">Enter Registration Number</string>
     <string name="btn_sign_up">Sign Up</string>

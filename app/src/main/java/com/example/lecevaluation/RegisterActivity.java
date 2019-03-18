@@ -26,7 +26,7 @@ import java.util.Map;
 public class RegisterActivity extends AppCompatActivity {
 
     private static final String TAG = "RegisterActivity";
-    private static final  String URL_FOR_REGISTRATION = "http://192.168.42.204/android_login/register.php";
+    private static final  String URL_FOR_REGISTRATION = "http://192.168.168.1/android_login/register.php";
     ProgressDialog progressDialog;
 
     private EditText SignupInputFirstName,SignupInputLastName,SignupInputRegNo, SignupInputEmail, SignupInputPassword;
@@ -46,16 +46,16 @@ public class RegisterActivity extends AppCompatActivity {
         progressDialog = new ProgressDialog(this);
         progressDialog.setCancelable(false);
 
-        SignupInputFirstName = (EditText) findViewById(R.id.signup_input_FirstName);
-        SignupInputLastName = (EditText) findViewById(R.id.signup_input_LastName);
-        SignupInputRegNo = (EditText) findViewById(R.id.signup_input_regNo);
-        SignupInputEmail = (EditText) findViewById(R.id.signup_input_email);
-        SignupInputPassword = (EditText) findViewById(R.id.signup_input_password);
+        SignupInputFirstName =  findViewById(R.id.signup_input_FirstName);
+        SignupInputLastName =  findViewById(R.id.signup_input_LastName);
+        SignupInputRegNo =  findViewById(R.id.signup_input_regNo);
+        SignupInputEmail =  findViewById(R.id.signup_input_email);
+        SignupInputPassword =  findViewById(R.id.signup_input_password);
 
-        btnLinkLogin = (Button) findViewById(R.id.btn_link_login);
-        btnSignup = (Button) findViewById(R.id.btn_signup);
+        btnLinkLogin =  findViewById(R.id.btn_link_login);
+        btnSignup =  findViewById(R.id.btn_signup);
 
-        genderRadioGroup = (RadioGroup) findViewById(R.id.gender_radio_group);
+        genderRadioGroup =  findViewById(R.id.gender_radio_group);
         btnSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -101,7 +101,7 @@ public class RegisterActivity extends AppCompatActivity {
                 URL_FOR_REGISTRATION, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                Log.d(TAG, "Response: " + response.toString());
+                Log.d(TAG, "Response: " + response);
                 hideDialog();
 
                 try {
@@ -140,7 +140,7 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() {
                 // Posting params to register url
-                Map<String, String> params = new HashMap<String, String>();
+                Map<String, String> params = new HashMap<>();
                 params.put("first_name", first_name);
                 params.put("last_name", last_name);
                 params.put("reg_no", reg_no);
