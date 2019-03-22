@@ -26,7 +26,7 @@ import java.util.Map;
 public class RegisterActivity extends AppCompatActivity {
 
     private static final String TAG = "RegisterActivity";
-    private static final  String URL_FOR_REGISTRATION = "http://192.168.168.1/android_login/register.php";
+    private static final  String URL_FOR_REGISTRATION = "http://192.168.54.1/android_login/register.php";
     ProgressDialog progressDialog;
 
     private EditText SignupInputFirstName,SignupInputLastName,SignupInputRegNo, SignupInputEmail, SignupInputPassword;
@@ -60,6 +60,12 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 submitForm();
+
+                /**validate
+                 *
+                 * Student student = new student ;
+                 * student.setEmail(email.getText().toString());
+                Student*/
             }
         });
         btnLinkLogin.setOnClickListener(new View.OnClickListener() {
