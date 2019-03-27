@@ -1,4 +1,6 @@
 <resources>
+    <color name="white">#FFFFFF</color>
+
     <string name="app_name">LecEvaluation</string>
     <string name="btn_login">Login</string>
     <string name="Login">Login</string>
