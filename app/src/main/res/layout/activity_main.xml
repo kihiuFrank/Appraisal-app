@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:gravity="center"
     android:paddingLeft="20dp"
     android:paddingRight="20dp"
     android:layout_marginTop="0dp"
-    android:background="@color/white"
+    android:background="@android:color/darker_gray"
     tools:context=".MainActivity">
 <RelativeLayout
     android:layout_width="match_parent"
@@ -143,7 +143,8 @@
         android:textSize = "22sp"
         android:layout_marginTop="60dp"
         android:layout_below="@+id/textView2"
-        android:textColor="@android:color/holo_blue_dark"
+        android:textColor="@android:color/white"
+        android:background="@android:color/holo_blue_dark"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="50dp"/>
 
@@ -152,7 +153,8 @@
         android:layout_height="wrap_content"
         android:text="@string/btn_link_signup"
         android:textSize = "20sp"
-        android:textColor="@android:color/holo_blue_dark"
+        android:textColor="@android:color/white"
+        android:background="@android:color/holo_blue_dark"
         android:layout_toRightOf="@+id/textView2"
         android:layout_toEndOf="@+id/textView2"
         android:layout_below="@id/textView3"
