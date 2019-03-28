@@ -1,6 +1,12 @@
 <resources>
     <color name="white">#FFFFFF</color>
 
+    <string name="tourism">School of Tourism</string>
+    <string name="nursing">School of Nursing</string>
+    <string name="computing">School of Computing</string>
+    <string name="Ap_Science">School of Applied Sciences</string>
+
+
     <string name="app_name">LecEvaluation</string>
     <string name="btn_login">Login</string>
     <string name="Login">Login</string>

@@ -9,20 +9,19 @@
     android:paddingRight="20dp"
     android:layout_marginTop="0dp"
     android:background="@color/white"
-    android:backgroundTint="FFFFFF"
     tools:context=".MainActivity">
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
-    <TextView
-        android:layout_width = "wrap_content"
-        android:layout_height = "wrap_content"
-        android:text = "@string/Lec"
-        android:id = "@+id/textView1"
-        android:layout_alignParentTop = "true"
-        android:layout_centerHorizontal = "true"
-        android:textColor = "@android:color/holo_orange_dark"
-        android:textSize = "35sp" />
+    <!--<TextView-->
+        <!--android:layout_width = "wrap_content"-->
+        <!--android:layout_height = "wrap_content"-->
+        <!--android:text = "@string/Lec"-->
+        <!--android:id = "@+id/textView1"-->
+        <!--android:layout_alignParentTop = "true"-->
+        <!--android:layout_centerHorizontal = "true"-->
+        <!--android:textColor = "@android:color/holo_orange_dark"-->
+        <!--android:textSize = "35sp" />-->
 
     <TextView
         android:text = "@string/Login"
@@ -31,8 +30,8 @@
         android:id = "@+id/textView"
         android:textSize = "35sp"
         android:textColor="@android:color/holo_blue_dark"
-        android:layout_marginTop="10dp"
-        android:layout_below = "@+id/textView1"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal = "true" />
 
     <ImageView
