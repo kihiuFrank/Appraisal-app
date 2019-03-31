@@ -1,9 +1,18 @@
 <resources>
     <color name="white">#FFFFFF</color>
+    <string name="submit">SUBMIT</string>
+
+    <string name="computing">School of Computing</string>
+    <string name="uCode">Unit Code: 3500</string>
+    <string name="uCode1">Unit Code: 3145</string>
+    <string name="uCode2">Unit Code: 8951</string>
+    <string name="uCode3">Unit Code: 2545</string>
+    <string name="uCode4">Unit Code: 3300</string>
+    <string name="uCode5">Unit Code: 3521</string>
+    <string name="uCode6">Unit Code: 3100</string>
 
     <string name="tourism">School of Tourism</string>
     <string name="nursing">School of Nursing</string>
-    <string name="computing">School of Computing</string>
     <string name="Ap_Science">School of Marine Science</string>
 
 
@@ -32,6 +41,9 @@
     <string name="hint_gender">Gender</string>
     <string name="male">Male</string>
     <string name="female">Female</string>
+
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
 
     <string name="Enter_Email">Enter Email</string>
 

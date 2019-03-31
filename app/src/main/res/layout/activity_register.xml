@@ -4,223 +4,223 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:layout_gravity="center"
     android:background="@drawable/africa"
-    android:paddingTop="20dp"
+    android:orientation="vertical"
     android:paddingLeft="10dp"
+    android:paddingTop="20dp"
     android:paddingRight="10dp"
     tools:context=".RegisterActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:orientation="vertical">
+        android:paddingRight="20dp">
 
         <!--<TextView-->
-            <!--android:id="@+id/textView1"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_alignParentTop="true"-->
-            <!--android:layout_centerHorizontal="true"-->
-            <!--android:text="@string/Lec"-->
-            <!--android:textColor = "@android:color/holo_orange_dark"-->
-            <!--android:textSize="35sp" />-->
+        <!--android:id="@+id/textView1"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:text="@string/Lec"-->
+        <!--android:textColor = "@android:color/holo_orange_dark"-->
+        <!--android:textSize="35sp" />-->
 
         <TextView
-            android:text = "@string/Register"
+            android:id="@+id/textView"
             android:layout_width="wrap_content"
-            android:layout_height = "wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="@string/Register"
             android:textColor="@android:color/holo_blue_dark"
-            android:id = "@+id/textView"
-            android:textSize = "35sp"
-            android:layout_marginTop="15dp" />
+            android:textSize="35sp" />
 
         <ImageView
-            android:layout_marginTop="20dp"
+            android:id="@+id/imageView"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:id="@+id/imageView"
-            android:src="@drawable/must"
             android:layout_below="@+id/textView"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="0dp"
             android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
             android:layout_toEndOf="@+id/textView"
-            android:layout_toRightOf="@+id/textView"/>
+            android:layout_toRightOf="@+id/textView"
+            android:src="@drawable/must" />
 
         <android.support.design.widget.TextInputLayout
+            android:id="@+id/first_name_widget"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/first_name_widget"
-            android:layout_marginTop = "20dp"
-            android:layout_below = "@+id/imageView"
-            android:layout_alignParentLeft = "true"
-            android:layout_alignParentStart = "true"
-            android:layout_alignParentRight = "true"
-            android:layout_alignParentEnd = "true"
-            android:textColorHighlight = "#ff7eff15"
+            android:layout_below="@+id/imageView"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:textColorHighlight="#ff7eff15"
             android:textColorHint="@android:color/holo_blue_light">
 
             <EditText
-                android:layout_width = "wrap_content"
-                android:layout_height = "wrap_content"
-                android:id = "@+id/signup_input_FirstName"
-                android:hint=   "@string/Enter_First_name"
-                android:focusable = "true"
+                android:id="@+id/signup_input_FirstName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:ems="16"
+                android:focusable="true"
+                android:hint="@string/Enter_First_name"
                 android:textColor="@android:color/background_dark" />
 
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/last_name_widget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/first_name_widget"
-            android:layout_marginTop = "10dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignRight="@+id/first_name_widget"
             android:layout_alignEnd="@+id/first_name_widget"
-            android:textColorHint="@android:color/holo_blue_light"
-            android:textColor="@android:color/background_dark">
+            android:layout_alignRight="@+id/first_name_widget"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/background_dark"
+            android:textColorHint="@android:color/holo_blue_light">
 
             <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="text"
-                android:ems="16"
                 android:id="@+id/signup_input_LastName"
-                android:hint="@string/Enter_Last_name" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="16"
+                android:hint="@string/Enter_Last_name"
+                android:inputType="text" />
 
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/regNo_widget"
-            android:layout_marginTop = "10dp"
-            android:layout_below = "@+id/last_name_widget"
-            android:layout_alignParentLeft = "true"
-            android:layout_alignParentStart = "true"
-            android:layout_alignRight="@+id/last_name_widget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/last_name_widget"
             android:layout_alignEnd="@+id/last_name_widget"
-            android:textColorHighlight = "#ff7eff15"
-            android:textColorHint="@android:color/holo_blue_light"
-            android:textColor="@android:color/background_dark">
+            android:layout_alignRight="@+id/last_name_widget"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/background_dark"
+            android:textColorHighlight="#ff7eff15"
+            android:textColorHint="@android:color/holo_blue_light">
 
             <EditText
-                android:layout_width = "wrap_content"
-                android:layout_height = "wrap_content"
-                android:id = "@+id/signup_input_regNo"
-                android:hint=   "@string/hint_enter_regNo"
+                android:id="@+id/signup_input_regNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:ems="16"
-                android:focusable = "true" />
+                android:focusable="true"
+                android:hint="@string/hint_enter_regNo" />
 
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/email_widget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/regNo_widget"
-            android:layout_marginTop = "10dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignRight="@+id/regNo_widget"
             android:layout_alignEnd="@+id/regNo_widget"
-            android:textColorHint="@android:color/holo_blue_light"
-            android:textColor="@android:color/background_dark">
+            android:layout_alignRight="@+id/regNo_widget"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/background_dark"
+            android:textColorHint="@android:color/holo_blue_light">
 
             <EditText
+                android:id="@+id/signup_input_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
                 android:ems="16"
-                android:id="@+id/signup_input_email"
-                android:hint="@string/Enter_Email" />
+                android:hint="@string/Enter_Email"
+                android:inputType="textEmailAddress" />
 
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
+            android:id="@+id/password_widget"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/password_widget"
             android:layout_below="@+id/email_widget"
-            android:layout_marginTop = "10dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignRight="@+id/email_widget"
             android:layout_alignEnd="@+id/email_widget"
-            android:textColorHint="@android:color/holo_blue_light"
-            android:textColor="@android:color/background_dark">
+            android:layout_alignRight="@+id/email_widget"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/background_dark"
+            android:textColorHint="@android:color/holo_blue_light">
 
             <EditText
+                android:id="@+id/signup_input_password"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword"
                 android:ems="16"
-                android:id="@+id/signup_input_password"
-                android:hint="@string/Enter_password" />
+                android:hint="@string/Enter_password"
+                android:inputType="textPassword" />
 
         </android.support.design.widget.TextInputLayout>
 
         <TextView
             android:id="@+id/gender_textview"
-            android:paddingRight="15dp"
-            android:paddingStart="15dp"
-            android:paddingEnd="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/password_widget"
-            android:layout_marginTop = "10dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignRight="@+id/password_widget"
             android:layout_alignEnd="@+id/password_widget"
+            android:layout_alignRight="@+id/password_widget"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@string/password"
+            android:fontFeatureSettings="@string/password"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:paddingRight="15dp"
             android:text="@string/hint_gender"
             android:textColor="@android:color/background_dark"
-            android:fontFeatureSettings="@string/password"
-            android:textSize="20sp"
-            android:fontFamily="@string/password"/>
+            android:textSize="20sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/gender_textview"
-            android:layout_toEndOf="@+id/gender_textview"
-            android:orientation="vertical"
-            android:layout_marginTop = "10dp"
-            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/gender_textview"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/gender_textview">
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/gender_textview"
+            android:layout_toRightOf="@+id/gender_textview"
+            android:orientation="vertical">
 
             <RadioGroup
                 android:id="@+id/gender_radio_group"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
                 <RadioButton
                     android:id="@+id/male_radio_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/male"
-                    android:textColor="@android:color/background_dark"
                     android:checked="true"
-                    />
+                    android:text="@string/male"
+                    android:textColor="@android:color/background_dark" />
+
                 <RadioButton
                     android:id="@+id/female_radio_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text = "@string/female"
-                    android:textColor="@android:color/background_dark"
-                    />
+                    android:text="@string/female"
+                    android:textColor="@android:color/background_dark" />
             </RadioGroup>
 
         </LinearLayout>
@@ -232,11 +232,11 @@
             android:layout_below="@+id/gender_textview"
             android:layout_marginStart="0dp"
             android:layout_marginLeft="0dp"
-            android:textColor="@android:color/white"
-            android:background="@android:color/holo_blue_dark"
             android:layout_marginTop="80dp"
-            android:textSize = "20sp"
-            android:text="@string/btn_sign_up"/>
+            android:background="@android:color/holo_blue_dark"
+            android:text="@string/btn_sign_up"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/btn_link_login"
@@ -244,8 +244,6 @@
             android:layout_height="63dp"
             android:layout_below="@id/gender_textview"
             android:layout_alignParentEnd="true"
-            android:textColor="@android:color/white"
-            android:background="@android:color/holo_blue_dark"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="20dp"
@@ -255,8 +253,10 @@
             android:layout_marginRight="3dp"
             android:layout_toEndOf="@+id/btn_signup"
             android:layout_toRightOf="@+id/btn_signup"
-            android:textSize = "18sp"
-            android:text="@string/btn_link_login" />
+            android:background="@android:color/holo_blue_dark"
+            android:text="@string/btn_link_login"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
 
 
     </RelativeLayout>

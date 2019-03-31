@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array
+        name="questions">
+        <item>Did the lecturer attend 75% of the classes or more? </item>
+        <item>Were the CATS and assignment returned on time? </item>
+        <item>Did the lecturer give any practical lessons? </item>
+        <item>Was the lecture good at keeping time?</item>
+        <item>Did the lecturer have a good delivery of content?</item>
+        <item>Do you think we should sack them?</item>
+        <item>Would you want to take another class with the same lecturer? </item>
+    </string-array>
+</resources>

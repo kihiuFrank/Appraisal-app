@@ -4,16 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="0dp"
+    android:background="@drawable/africa"
     android:gravity="center"
     android:paddingLeft="20dp"
     android:paddingRight="20dp"
-    android:layout_marginTop="0dp"
-    android:background="@android:color/darker_gray"
     tools:context=".MainActivity">
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-    <!--<TextView-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--<TextView-->
         <!--android:layout_width = "wrap_content"-->
         <!--android:layout_height = "wrap_content"-->
         <!--android:text = "@string/Lec"-->
@@ -23,145 +24,150 @@
         <!--android:textColor = "@android:color/holo_orange_dark"-->
         <!--android:textSize = "35sp" />-->
 
-    <TextView
-        android:text = "@string/Login"
-        android:layout_width="wrap_content"
-        android:layout_height = "wrap_content"
-        android:id = "@+id/textView"
-        android:textSize = "35sp"
-        android:textColor="@android:color/holo_blue_dark"
-        android:layout_marginTop="20dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal = "true" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="@string/Login"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="35sp" />
 
-    <ImageView
-        android:layout_width="300dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="20dp"
-        android:id="@+id/imageView"
-        android:src="@drawable/must"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="150dp"
+            android:layout_height="130dp"
+            android:layout_below="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@+id/textView"
+            android:layout_toRightOf="@+id/textView"
+            android:src="@drawable/must" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textViewReg"
-        android:textColor="@android:color/holo_blue_dark"
-        android:textColorHint="@android:color/holo_blue_dark"
-        android:layout_marginTop="35dp"
-        android:textSize = "25sp"
-        android:layout_below = "@+id/imageView"
-        android:layout_alignParentLeft = "true"
-        android:layout_alignParentStart = "true"
-        android:focusable = "true"
-        android:text="@string/regNo"/>
-
-
-
-    <EditText
-        android:layout_width = "wrap_content"
-        android:layout_height = "wrap_content"
-        android:id = "@+id/login_input_regNo"
-        android:focusable = "true"
-        android:textColorHint="@android:color/holo_blue_light"
-        android:layout_marginTop = "30dp"
-        android:layout_below = "@+id/imageView"
-        android:layout_marginEnd="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginStart="38dp"
-        android:layout_marginLeft="38dp"
-        android:layout_toEndOf="@+id/textViewReg"
-        android:layout_toRightOf="@id/login_input_regNo"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd = "true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textViewPwd"
-        android:textColor="@android:color/holo_blue_dark"
-        android:textColorHint="@android:color/holo_blue_dark"
-        android:layout_marginTop="50dp"
-        android:textSize = "25sp"
-        android:layout_below = "@+id/textViewReg"
-        android:layout_alignParentLeft = "true"
-        android:layout_alignParentStart = "true"
-        android:focusable = "true"
-        android:text="@string/password"/>
+        <TextView
+            android:id="@+id/textViewReg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="80dp"
+            android:focusable="true"
+            android:text="@string/regNo"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textColorHint="@android:color/holo_blue_dark"
+            android:textSize="25sp" />
 
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:id="@+id/login_input_password"
-        android:layout_below="@+id/login_input_regNo"
-        android:layout_marginTop="37dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginStart="10dp"
-        android:layout_toEndOf="@+id/textViewPwd"
-        android:layout_toRightOf="@id/login_input_password"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd = "true" />
+        <EditText
+            android:id="@+id/login_input_regNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="38dp"
+            android:layout_marginLeft="38dp"
+            android:layout_marginTop="75dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toEndOf="@+id/textViewReg"
+            android:layout_toRightOf="@id/login_input_regNo"
+            android:focusable="true"
+            android:textColorHint="@android:color/holo_blue_light" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/attempts"
-        android:id="@+id/textView2"
-        android:textColor="@android:color/background_dark"
-        android:layout_below="@+id/login_input_password"
-        android:layout_alignParentLeft="true"
-        android:layout_marginTop="40dp"
-        android:layout_alignParentStart="true"
-        android:textSize="25sp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Text"
-        android:id="@+id/textView3"
-        android:layout_alignTop="@+id/textView2"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignBottom="@+id/textView2"
-        android:layout_toEndOf="@+id/textView2"
-        android:textSize="25sp"
-        android:layout_toRightOf="@+id/textView2"
-        android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginEnd="80dp"
-        android:layout_marginRight="80dp"/>
+        <TextView
+            android:id="@+id/textViewPwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewReg"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="50dp"
+            android:focusable="true"
+            android:text="@string/password"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textColorHint="@android:color/holo_blue_dark"
+            android:textSize="25sp" />
 
 
-    <Button android:id="@+id/btn_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_login"
-        android:textSize = "22sp"
-        android:layout_marginTop="60dp"
-        android:layout_below="@+id/textView2"
-        android:textColor="@android:color/white"
-        android:background="@android:color/holo_blue_dark"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="50dp"/>
+        <EditText
+            android:id="@+id/login_input_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/login_input_regNo"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="37dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_toEndOf="@+id/textViewPwd"
+            android:layout_toRightOf="@id/login_input_password"
+            android:inputType="textPassword" />
 
-    <Button android:id="@+id/btn_link_signup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_link_signup"
-        android:textSize = "20sp"
-        android:textColor="@android:color/white"
-        android:background="@android:color/holo_blue_dark"
-        android:layout_toRightOf="@+id/textView2"
-        android:layout_toEndOf="@+id/textView2"
-        android:layout_below="@id/textView3"
-        android:layout_marginTop="30dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="50dp"/>
-</RelativeLayout>
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/login_input_password"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="40dp"
+            android:text="@string/attempts"
+            android:textColor="@android:color/background_dark"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textView2"
+            android:layout_alignBottom="@+id/textView2"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginEnd="80dp"
+            android:layout_marginRight="80dp"
+            android:layout_toEndOf="@+id/textView2"
+            android:layout_toRightOf="@+id/textView2"
+            android:text="New Text"
+            android:textSize="25sp" />
+
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView2"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="60dp"
+            android:background="@android:color/holo_blue_light"
+            android:text="@string/btn_login"
+            android:textColor="@android:color/white"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/btn_link_signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView3"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="70dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="30dp"
+            android:layout_toEndOf="@+id/textView2"
+            android:layout_toRightOf="@+id/textView2"
+            android:background="@android:color/holo_blue_light"
+            android:text="@string/btn_link_signup"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
 
 </ScrollView>
