@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -23,19 +22,40 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Pattern;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final Pattern PASSWORD_PATTERN = Pattern.compile("^" +
+            "(?=.*[0-9])" + //at least one digit
+            "(?=.*[a-z])" + //at least one lower case letter
+            "(?=.*[A-Z])" + //at least one upper case letter
+            "(?=.*[a-zA-Z])" + //any letter
+            //"(?=.*[@#$%^&+=])" +  //at least one special character
+            "(?=\\S+$)" +  //no white spaces
+            ".{8,}" + // at least 8 characters
+            "$");
+    private static final Pattern REG_NO = Pattern.compile("^" +
+            "(?=.*[0-9])" + //at least one digit
+            //"(?=.*[a-z])" + //at least one lower case letter
+            //"(?=.*[A-Z])" + //at least one upper case letter
+            "(?=.*[a-zA-Z])" + //any letter
+            "(?=.*[/])" +  //at least one special character
+            "(?=\\S+$)" +  //no white spaces
+            ".{8,}" + // at least 8 characters
+            "$");
+
     private static final String TAG = "MainActivity";
-    private static final String URL_FOR_LOGIN = "http://10.1.0.215/android_login/login.php";
+    private static final String URL_FOR_LOGIN = "http://192.168.42.20/android_login/login.php";
 
 
     ProgressDialog progressDialog;
     private EditText loginInputregNo, loginInputPassword;
     private Button btnlogin;
     private Button btnLinkSignup;
-    TextView textView;
+    //TextView textView;
     int counter = 3;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,8 +66,9 @@ public class MainActivity extends AppCompatActivity {
         loginInputPassword = findViewById(R.id.login_input_password);
         btnlogin =  findViewById(R.id.btn_login);
         btnLinkSignup =  findViewById(R.id.btn_link_signup);
-        textView = findViewById(R.id.textView3);
-        textView.setVisibility(View.GONE);
+        //Attempts
+        //textView = findViewById(R.id.textView3);
+        //textView.setVisibility(View.GONE);
 
         //Progress Dialog
         progressDialog = new ProgressDialog(this);
@@ -59,16 +80,38 @@ public class MainActivity extends AppCompatActivity {
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loginUser(loginInputregNo.getText().toString(),
-                        loginInputPassword.getText().toString());
 
-                textView.setVisibility(View.VISIBLE);
+                //Login Attempts Counter
+                /**textView.setVisibility(View.VISIBLE);
                 textView.setBackgroundColor(Color.RED);
                 counter--;
                 textView.setText(Integer.toString(counter));
 
                 if (counter == 0) {
                     btnlogin.setEnabled(false);
+                }*/
+
+                //for regNo and password validation
+                final String regNo = loginInputregNo.getText().toString();
+                final String pass = loginInputPassword.getText().toString();
+
+                //Reg no validation
+                if (regNo.isEmpty()){
+                    loginInputregNo.setError("Field can't be empty");
+                }else if (!REG_NO.matcher(regNo).matches()){
+                    loginInputregNo.setError("Invalid Reg No");
+                }else {
+                    loginInputregNo.setError(null);
+                }
+
+                //password validation
+                if (pass.isEmpty()){
+                    loginInputPassword.setError("Field can't be empty");
+                }else if (!PASSWORD_PATTERN.matcher(pass).matches()){
+                    loginInputPassword.setError("Password too weak");
+                    //Toast.makeText(getApplicationContext(), "Mix Caps, No.s, more than 8 characters with no spaces ", Toast.LENGTH_LONG).show();
+                }else {
+                    loginUser(loginInputregNo.getText().toString(), loginInputPassword.getText().toString());
                 }
             }
         });

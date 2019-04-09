@@ -22,11 +22,31 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Pattern;
 
 public class RegisterActivity extends AppCompatActivity {
 
+    private static final Pattern PASSWORD_PATTERN = Pattern.compile("^" +
+            "(?=.*[0-9])" + //at least one digit
+            "(?=.*[a-z])" + //at least one lower case letter
+            "(?=.*[A-Z])" + //at least one upper case letter
+            "(?=.*[a-zA-Z])" + //any letter
+            //"(?=.*[@#$%^&+=])" +  //at least one special character
+            "(?=\\S+$)" +  //no white spaces
+            ".{8,}" + // at least 8 characters
+            "$");
+    private static final Pattern REG_NO = Pattern.compile("^" +
+            "(?=.*[0-9])" + //at least one digit
+            //"(?=.*[a-z])" + //at least one lower case letter
+            //"(?=.*[A-Z])" + //at least one upper case letter
+            "(?=.*[a-zA-Z])" + //any letter
+            "(?=.*[/])" +  //at least one special character
+            "(?=\\S+$)" +  //no white spaces
+            ".{8,}" + // at least 8 characters
+            "$");
+
     private static final String TAG = "RegisterActivity";
-    private static final  String URL_FOR_REGISTRATION = "http://10.1.0.215/android_login/register.php";
+    private static final  String URL_FOR_REGISTRATION = "http://192.168.42.20/android_login/register.php";
     ProgressDialog progressDialog;
 
     private EditText SignupInputFirstName,SignupInputLastName,SignupInputRegNo, SignupInputEmail, SignupInputPassword;
@@ -56,10 +76,27 @@ public class RegisterActivity extends AppCompatActivity {
         btnSignup =  findViewById(R.id.btn_signup);
 
         genderRadioGroup =  findViewById(R.id.gender_radio_group);
+
         btnSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 submitForm();
+
+                final String reg_no = SignupInputRegNo.getText().toString();
+                final String email = SignupInputEmail.getText().toString();
+                final String pass = SignupInputPassword.getText().toString();
+
+                // Reg No Validation
+                if (reg_no.isEmpty()){
+                    SignupInputRegNo.setError("Field can't be empty");
+                }else if (!REG_NO.matcher(reg_no).matches()){
+                    SignupInputRegNo.setError("Invalid Reg No!");
+                }else {
+                    SignupInputRegNo.setError(null);
+                }
+
+                //Email Validation
+
 
                 /**validate
                  *

@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/submit"
         android:divider="@color/design_default_color_primary_dark"
-        android:dividerHeight="1dp"
+        android:dividerHeight="2dp"
         android:footerDividersEnabled="false" />
 
     <Button

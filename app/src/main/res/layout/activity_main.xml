@@ -38,7 +38,7 @@
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="150dp"
-            android:layout_height="130dp"
+            android:layout_height="100dp"
             android:layout_below="@+id/textView"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="0dp"
@@ -55,7 +55,7 @@
             android:layout_below="@+id/imageView"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="100dp"
             android:focusable="true"
             android:text="@string/regNo"
             android:textColor="@android:color/holo_blue_dark"
@@ -68,17 +68,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/imageView"
+            android:hint="@string/loginRegNo"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_marginStart="38dp"
             android:layout_marginLeft="38dp"
-            android:layout_marginTop="75dp"
+            android:layout_marginTop="95dp"
             android:layout_marginEnd="5dp"
             android:layout_marginRight="5dp"
             android:layout_toEndOf="@+id/textViewReg"
             android:layout_toRightOf="@id/login_input_regNo"
             android:focusable="true"
-            android:textColorHint="@android:color/holo_blue_light" />
+            android:textColorHint="@android:color/background_dark" />
 
         <TextView
             android:id="@+id/textViewPwd"
@@ -87,7 +88,7 @@
             android:layout_below="@+id/textViewReg"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="70dp"
             android:focusable="true"
             android:text="@string/password"
             android:textColor="@android:color/holo_blue_dark"
@@ -103,51 +104,51 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="37dp"
+            android:layout_marginTop="57dp"
             android:layout_marginEnd="10dp"
             android:layout_marginRight="20dp"
             android:layout_toEndOf="@+id/textViewPwd"
             android:layout_toRightOf="@id/login_input_password"
             android:inputType="textPassword" />
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/login_input_password"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_marginTop="40dp"
-            android:text="@string/attempts"
-            android:textColor="@android:color/background_dark"
-            android:textSize="25sp" />
+        <!--<TextView-->
+            <!--android:id="@+id/textView2"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/login_input_password"-->
+            <!--android:layout_alignParentStart="true"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_marginTop="40dp"-->
+            <!--android:text="@string/attempts"-->
+            <!--android:textColor="@android:color/background_dark"-->
+            <!--android:textSize="25sp" />-->
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/textView2"
-            android:layout_alignBottom="@+id/textView2"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginStart="50dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginEnd="80dp"
-            android:layout_marginRight="80dp"
-            android:layout_toEndOf="@+id/textView2"
-            android:layout_toRightOf="@+id/textView2"
-            android:text="New Text"
-            android:textSize="25sp" />
+        <!--<TextView-->
+            <!--android:id="@+id/textView3"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignTop="@+id/textView2"-->
+            <!--android:layout_alignBottom="@+id/textView2"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_marginStart="50dp"-->
+            <!--android:layout_marginLeft="50dp"-->
+            <!--android:layout_marginEnd="80dp"-->
+            <!--android:layout_marginRight="80dp"-->
+            <!--android:layout_toEndOf="@+id/textView2"-->
+            <!--android:layout_toRightOf="@+id/textView2"-->
+            <!--android:text="New Text"-->
+            <!--android:textSize="25sp" />-->
 
 
         <Button
             android:id="@+id/btn_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textView2"
+            android:layout_below="@+id/textViewPwd"
             android:layout_marginStart="40dp"
             android:layout_marginLeft="50dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="100dp"
             android:background="@android:color/holo_blue_light"
             android:text="@string/btn_login"
             android:textColor="@android:color/white"
@@ -157,13 +158,12 @@
             android:id="@+id/btn_link_signup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/textView3"
+            android:layout_below="@id/login_input_password"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="70dp"
-            android:layout_marginLeft="70dp"
-            android:layout_marginTop="30dp"
-            android:layout_toEndOf="@+id/textView2"
-            android:layout_toRightOf="@+id/textView2"
+            android:layout_marginStart="120dp"
+            android:layout_marginLeft="120dp"
+            android:layout_toEndOf="@+id/textViewPwd"
+            android:layout_toRightOf="@+id/textViewPwd"
             android:background="@android:color/holo_blue_light"
             android:text="@string/btn_link_signup"
             android:textColor="@android:color/white"
